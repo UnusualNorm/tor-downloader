@@ -572,36 +572,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@dreamed-atlas/node-tor@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@dreamed-atlas/node-tor@workspace:."
-  dependencies:
-    "@commitlint/cli": ^12.1.4
-    "@commitlint/config-conventional": ^12.1.4
-    "@types/jest": ^26.0.23
-    husky: ^6.0.0
-    jest: ^27.0.3
-    jest-mock-extended: ^1.0.15
-    lint-staged: ^11.0.0
-    prettier: ^2.3.0
-    prettylint: ^1.0.0
-    ts-jest: ^27.0.1
-    typescript: ^4.2.4
-  languageName: unknown
-  linkType: soft
-
-"@dreamed-atlas/tor-downloader@workspace:packages/tor-downloader":
-  version: 0.0.0-use.local
-  resolution: "@dreamed-atlas/tor-downloader@workspace:packages/tor-downloader"
-  dependencies:
-    "@types/node": ^15.6.0
-    "@types/rimraf": ^3.0.0
-    node-stream-zip: ^1.13.4
-    rimraf: ^3.0.2
-    xz: ^2.0.2
-  languageName: unknown
-  linkType: soft
-
 "@istanbuljs/load-nyc-config@npm:^1.0.0":
   version: 1.1.0
   resolution: "@istanbuljs/load-nyc-config@npm:1.1.0"
@@ -912,6 +882,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/fs-extra@npm:^9.0.13":
+  version: 9.0.13
+  resolution: "@types/fs-extra@npm:9.0.13"
+  dependencies:
+    "@types/node": "*"
+  checksum: ca4dc68663870775b20abe26a1cc3228c5790113b2c984395ea9cd448443abb4433420821030813bd7cdf1718144afafaa9efa6cd8419dcc4a49c9117a577ad1
+  languageName: node
+  linkType: hard
+
 "@types/glob@npm:*":
   version: 7.1.3
   resolution: "@types/glob@npm:7.1.3"
@@ -963,6 +942,15 @@ __metadata:
     jest-diff: ^26.0.0
     pretty-format: ^26.0.0
   checksum: a015676b78bdc51be6f6315acef10d9106ea8064e3e49143bca3c75b834b61285b45c5f5ccfd049a80107f1e2869a9183cdb5be85816c073ea8dd05852fafdc6
+  languageName: node
+  linkType: hard
+
+"@types/lzma-native@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@types/lzma-native@npm:4.0.1"
+  dependencies:
+    "@types/node": "*"
+  checksum: 5ace4826ae3849cb4f88f8bed184fca43e4ed63bf6052ae158c0d1db57b841fdca354a7126c9c036967735a18a5fa10cf8ea41629bec065d3d6557350f46a11f
   languageName: node
   linkType: hard
 
@@ -1049,6 +1037,39 @@ __metadata:
   checksum: 84b8f617742b4a86f334838152cbc8d2fae4cc2568a81c4d54a9a9c7a6dc926f4fb21c3cb9d34cad895ab4f020041e28bcfe16348a34d370a2833450750ccd66
   languageName: node
   linkType: hard
+
+"@unnusualnorm/node-tor@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@unnusualnorm/node-tor@workspace:."
+  dependencies:
+    "@commitlint/cli": ^12.1.4
+    "@commitlint/config-conventional": ^12.1.4
+    "@types/jest": ^26.0.23
+    husky: ^6.0.0
+    jest: ^27.0.3
+    jest-mock-extended: ^1.0.15
+    lint-staged: ^11.0.0
+    prettier: ^2.3.0
+    prettylint: ^1.0.0
+    ts-jest: ^27.0.1
+    typescript: ^4.2.4
+  languageName: unknown
+  linkType: soft
+
+"@unnusualnorm/tor-downloader@workspace:packages/tor-downloader":
+  version: 0.0.0-use.local
+  resolution: "@unnusualnorm/tor-downloader@workspace:packages/tor-downloader"
+  dependencies:
+    "@types/fs-extra": ^9.0.13
+    "@types/lzma-native": ^4.0.1
+    "@types/node": ^15.6.0
+    "@types/rimraf": ^3.0.0
+    fs-extra: ^10.1.0
+    lzma-native: ^8.0.6
+    node-stream-zip: ^1.13.4
+    rimraf: ^3.0.2
+  languageName: unknown
+  linkType: soft
 
 "JSONStream@npm:^1.0.4":
   version: 1.3.5
@@ -2232,6 +2253,17 @@ __metadata:
     combined-stream: ^1.0.8
     mime-types: ^2.1.12
   checksum: 6574ff4d2d845c47ba288151a6e0573767eefdee9da358be199e0f0b66aa5c454e7d62ed5e0daef6f84167ba1e9596e064f36f206488e460ef449ef7b653cdfc
+  languageName: node
+  linkType: hard
+
+"fs-extra@npm:^10.1.0":
+  version: 10.1.0
+  resolution: "fs-extra@npm:10.1.0"
+  dependencies:
+    graceful-fs: ^4.2.0
+    jsonfile: ^6.0.1
+    universalify: ^2.0.0
+  checksum: ea286a767c6e1cbfbb0bd48729b8e5e1734d919bf948ec13c1bde18a451ecf4ab9bd65475a031953032a6d740b3e5f48a945e89d5da536ad9876f7c349c9a2a4
   languageName: node
   linkType: hard
 
@@ -3668,6 +3700,20 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"lzma-native@npm:^8.0.6":
+  version: 8.0.6
+  resolution: "lzma-native@npm:8.0.6"
+  dependencies:
+    node-addon-api: ^3.1.0
+    node-gyp: latest
+    node-gyp-build: ^4.2.1
+    readable-stream: ^3.6.0
+  bin:
+    lzmajs: bin/lzmajs
+  checksum: bef63fe476636deedf9e8f95467c2f9f12b87bbc70f91022681e074b47cf19c8fe526a9c63233f4941c78fc12a0648d2337c69a9e0ff245295d5d5eab2230c64
+  languageName: node
+  linkType: hard
+
 "make-dir@npm:^3.0.0":
   version: 3.1.0
   resolution: "make-dir@npm:3.1.0"
@@ -3941,12 +3987,23 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"node-addon-api@npm:^1.6.1":
-  version: 1.7.2
-  resolution: "node-addon-api@npm:1.7.2"
+"node-addon-api@npm:^3.1.0":
+  version: 3.2.1
+  resolution: "node-addon-api@npm:3.2.1"
   dependencies:
     node-gyp: latest
-  checksum: 6796f58946713c647bccdfdb6ceb42dccb980170e9ce3ca3a65cca659a417d79210999fd297963656371c616c7b75b74bbdefae36257ae84c28927fb7ae037d4
+  checksum: b4c69283fc7baa813e7f38085ee8cd3bd9fd1463a11621eb7e9be12cd494bfabd83b1e7880dc7f7a8d664f8545238ce310d61301b3c4ae608e6e49f4862c41e5
+  languageName: node
+  linkType: hard
+
+"node-gyp-build@npm:^4.2.1":
+  version: 4.4.0
+  resolution: "node-gyp-build@npm:4.4.0"
+  bin:
+    node-gyp-build: bin.js
+    node-gyp-build-optional: optional.js
+    node-gyp-build-test: build-test.js
+  checksum: 185aafe3f54e6e29a06337a9303beb27ee9e20fe68ce615c0665fba0998410659e6ac850ce0dbace602d939ac38b03975f0f2c51f8248e294efd80f9ed3b9aa6
   languageName: node
   linkType: hard
 
@@ -4503,7 +4560,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:3, readable-stream@npm:^3.0.0":
+"readable-stream@npm:3, readable-stream@npm:^3.0.0, readable-stream@npm:^3.6.0":
   version: 3.6.0
   resolution: "readable-stream@npm:3.6.0"
   dependencies:
@@ -5568,16 +5625,6 @@ typescript@^4.2.4:
   version: 2.2.0
   resolution: "xmlchars@npm:2.2.0"
   checksum: 69bbb61e8d939873c8aa7d006d082944de2eb6f12f55e53fdfc670d544e677736b59e498ece303f264bd1dc39b77557eef1c1c9bfb09eb5e1e30ac552420d81e
-  languageName: node
-  linkType: hard
-
-"xz@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "xz@npm:2.0.2"
-  dependencies:
-    node-addon-api: ^1.6.1
-    node-gyp: latest
-  checksum: 4db1e277d3b2a3a50a3f1a3cc0ee2f25ef53e2f82f7d43f219c181d96da7e4bd85d02e9e47aa42750147a7f1e4d01f479d6033e3ac19bedfc59da50a022fca94
   languageName: node
   linkType: hard
 

@@ -1,20 +1,19 @@
 {
-  "name": "@dreamed-atlas/node-tor",
+  "name": "@unnusualnorm/node-tor",
   "version": "0.0.0",
   "description": "A set of utility packages to bring Tor on Node.js",
   "private": true,
   "keywords": [
     "tor",
     "node.js",
-    "utility",
-    "dreamed-atlas"
+    "utility"
   ],
   "license": "MIT",
-  "author": "Dreamed Atlas (https://github.com/DreamedAtlas)",
-  "homepage": "https://github.com/DreamedAtlas/node-tor",
+  "author": "Unusual Norm (https://github.com/UnusualNorm)",
+  "homepage": "https://github.com/UnusualNorm/node-tor",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DreamedAtlas/node-tor.git"
+    "url": "https://github.com/UnusualNorm/node-tor.git"
   },
   "scripts": {
     "build": "tsc --build ./packages/*/tsconfig.build.json",

@@ -2,7 +2,7 @@
   "extends": "./tsconfig.build.json",
   "compilerOptions": {
     "paths": {
-      "@dreamed-atlas/*": [
+      "@unnusualnorm/*": [
         "./packages/*/src"
       ],
     }
