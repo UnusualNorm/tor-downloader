@@ -1,6 +1,6 @@
 import { createReadStream, createWriteStream } from "fs";
 import { async as StreamZip } from "node-stream-zip";
-import { Decompressor } from "xz";
+import { createDecompressor } from "lzma-native";
 
 async function unzip(zipFilePath: string, toDirectoryPath: string) {
     const zip = new StreamZip({ file: zipFilePath });
@@ -12,7 +12,7 @@ function decompressXz(filePath: string, decompressedFilePath: string) {
     return new Promise<void>((resolve, reject) => {
         const readStream = createReadStream(filePath);
         const writeStream = createWriteStream(decompressedFilePath);
-        const decompressor = new Decompressor();
+        const decompressor = createDecompressor();
 
         readStream.on("error", reject);
         decompressor.on("error", reject);

@@ -3,15 +3,16 @@ import {
     chmod as chmodFs,
     constants,
     Dirent,
+    existsSync,
     MakeDirectoryOptions,
     mkdir as mkdirFs,
     mkdtemp as mkdtempFs,
     Mode,
     readdir as readdirFs,
-    rename as renameFs,
     stat as statFs,
     Stats,
 } from "fs";
+import { move } from 'fs-extra';
 import { tmpdir } from "os";
 import { join as joinPath, basename } from "path";
 import * as rimraf from "rimraf";
@@ -86,8 +87,10 @@ function readdir(
 }
 
 function rename(oldPath: string, newPath: string) {
+    if (existsSync(newPath)) rimraf.sync(newPath);
+
     return new Promise<void>((resolve, reject) => {
-        renameFs(oldPath, newPath, (err) => {
+        move(oldPath, newPath, (err) => {
             if (err) {
                 return reject(err);
             }
